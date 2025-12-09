@@ -3,6 +3,7 @@ package com.smartinventory.backend.dto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Getter
 @Setter
@@ -13,7 +14,8 @@ public class UserResponseDto {
     private String email;
     private String role;
     private boolean active;
-    
+
+	@JsonIgnore
     private String password; 
     
     public UserResponseDto(Long id, String name, String email, String role, boolean active) {
